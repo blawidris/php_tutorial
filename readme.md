@@ -2,7 +2,7 @@
 
 ## Outline
 - Chapter One
-    - Understanding PHP and Why we use it
+    - Understanding PHP and Why we use it []
     - Installation
     - Variables
     - Data type
@@ -68,4 +68,3 @@
     - Static Method & properties
     - Magic Method
     - Working with Object
-
