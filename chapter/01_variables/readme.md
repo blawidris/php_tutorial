@@ -12,8 +12,8 @@ It store value of any data type
 ### Variable naming conventions
 
 - Pascal case involves capitalizing first letter of each word e.g $HelloWorld
-- Camel case involves using lowercase for the first word e.g $isMarried 
-- Snake and kebab: using underscore (_) or dash (-) to differentiate each word e.g $has_job
+- Camel case involves using lowercase for the first word e.g $isMarried
+- Snake and kebab: using underscore (\_) or dash (-) to differentiate each word e.g $has_job
 
 P.S: php does not support the use of dash to seperate variable name
 
@@ -28,10 +28,21 @@ e.g
 
 '''
 
-## Comment 
+## Comment
 
 Comment help provide meaningful information that will help to you and other developer quickly in the future.
 
 It has two categories:
-- Single-line comment: it's placed at the end of the line or at the current block. you can use ```#``` or ```//```
-- Multi-line comment: 
+
+- Single-line comment: it's placed at the end of the line or at the current block. you can use `#` or `//`
+- Multi-line comment: as it name implies it allows commenting on multi-line and it start `/*` and ends with `*\`
+
+### How to write meaningful comment
+
+- Let your comment speak for itself without using comment
+  _e.g_
+
+```
+    $is_completed = true;  // not cryptic name such as $ic = true;
+```
+- Let the code explain itself rather than using comment
