@@ -1,13 +1,11 @@
 # Variables
 
-It store value of any data type
-
-### Rules for naming variable
-
-- Must start with $
-- first letter after $ can start with underscore (\_) or character [a-zA-Z]
-- other letters can be number and character
+- A PHP variable is a container that stores a value, such as a number, string, or array.
+- It is denoted by a dollar sign ($) and must start with a letter or an underscore
+- Then followed by any number of letters, numbers, or underscores.
 - PHP variables are case-sensitive i.e $message not equal $MESSAGE or $Message
+
+The value of a variable can be changed, and the same variable can be used to store different values at different times during the execution of a script.
 
 ### Variable naming conventions
 
@@ -45,4 +43,92 @@ It has two categories:
 ```
     $is_completed = true;  // not cryptic name such as $ic = true;
 ```
+
 - Let the code explain itself rather than using comment
+
+### Constant Variable
+
+Constant variable hold value that cannot be change during execution of script and it can hold numbers, strings and arrays.
+
+- To declare a variable const you can use define() function or const keyword.
+- Use the define() function if you want to define a constant conditionally or using an expression.
+- Constant variable is case-sensitive and does not require having dollar ($) sign before it's name
+- define() can be use to name prefix constant
+- Must be declared at the top before other code
+
+e.g
+
+```
+// declare variable constant
+  define("PI", '3.14'); # 1
+  echo PI;
+
+  const WIDTH = 300;
+
+// expression declaration with constant
+
+if(!defined('WIDTH')){
+  define('WIDTH');
+}
+
+// naming prefix constant
+
+define('USER', "USER");
+define(USER."_1" , " Idris");
+
+//
+```
+
+## Data Types
+
+Determines the following:
+
+- the type of information a variable can hold
+
+- Operations that can be performed on each variable
+
+- Amount of memory location to be allocated
+
+In PHP, data types is categories into 3 which are;
+
+- Scalar types
+  This type of variable can only store a single value such as integer, float, boolean and string
+
+***string*** is a series of character enclosed by single ('') or double ("") quote. 
+
+***Integer*** is a whole number, either positive or negative, without a decimal point. Integers can be written in decimal (base 10), hexadecimal (base 16), or octal (base 8) form.
+
+***Float*** is a number with a decimal point.
+
+***Boolean*** A boolean is a data type that can only have two values: true or false.
+
+_e.g_
+
+```
+  $myName = "Idris Lawal"; // string
+  $myAge = 24; // integer (int: decimal)
+  $isEmployed = false; # boolean (bool)
+  $myCurrentBalance = 200.44; # float
+
+  # integer
+  echo 0x10; // hexadecimal
+  echo +010; // octal number
+
+  // Using underscore (_) to make your int / float value readable (from PHP 7.4 above)
+  $product_quantity = 1_000;
+  $product_price = 12_000.00;
+
+  //
+
+```
+
+To check if a value is an integer use is_int() built-in function.
+
+PHP consider the ffg as falsy:
+
+- when set value to false
+- When string empty "" or "0"
+- When variable value = 0;
+- When variable value = 0.0
+- When an array is empty
+- When value = null
