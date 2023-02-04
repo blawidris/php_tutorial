@@ -37,3 +37,17 @@ $numb2 = 5;
 // var_dump($numb1 <= $numb2); # less than or equal
 
 // Logical Operators
+$username = "blawidris";
+$password = "_aYoola";
+
+// var_dump(
+//     $username == "blawidris" && $password == "_aYoola"
+// ); # and you can use AND as well
+
+// var_dump(
+//     $username == "blawidris" || $password == "_aYoola"
+// ); # you can use OR
+
+// var_dump(
+//     !$username
+// ); # NOT
