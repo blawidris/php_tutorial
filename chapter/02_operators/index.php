@@ -1,53 +1,71 @@
 <?php
 
-# ============== Operators ============== #
 /*
-- Arithmetics Operators
-- Assignment Operators
-- Comparison Operators
-- Logical Operators
+======================
+OPERATORS
+
+** Types **
+- Unary Operators: requires 1 value e.g !
+- Binary Operators: requires 2 value (most common in php)
+    - Arithmetic operators
+    - Assignment operators
+    - Comparison operators
+    - Logical operators:
+    - String operators
+    - Array operators
+    - Error control operators
+    - 
+- Ternary Operators: requires 3 value
+======================
 */
 
-// Variable declaration
-$numb1 = 10;
-$numb2 = 5;
+// Arithmetic Operators
+// $x = 10;
+// $y = 2;
 
-// Arithmetics Operators
-// echo $numb1 + $numb2 . PHP_EOL; # add
-// echo $numb1 - $numb2 . PHP_EOL; # minus
-// echo $numb1 * $numb2 . PHP_EOL; # multiply
-// echo $numb1 / $numb2 . PHP_EOL; # division
-// echo $numb1 % $numb2 . PHP_EOL; # modulo(remainder)
+// echo $x + $y .PHP_EOL; # addition
+// echo $x - $y .PHP_EOL; # subtraction
+// echo $x / $y .PHP_EOL; # division
+// echo $x * $y .PHP_EOL; # multiplication
+// echo $x % $y .PHP_EOL; # modulo (remainder)
+// echo $x ** $y .PHP_EOL; # exponential
 
-// Assignment Operators
-// echo PHP_EOL . $numb1 += $numb2;
-// echo PHP_EOL . $numb1 -= $numb2;
-// echo PHP_EOL . $numb1 *= $numb2;
-// echo PHP_EOL . $numb1 /= $numb1;
-// echo PHP_EOL . $numb1 %= $numb2 . PHP_EOL;
+// float function
+// var_dump(fdiv(10.4, 2.5)); # float division
+// var_dump(fmod(10.4, 2.5)); # float modulo
 
-// Comparison Operators
-// var_dump($numb1 == $numb2); # equal
-// var_dump($numb1 === $numb2); # identical equal
-// var_dump($numb1 != $numb2); # not equal
-// var_dump($numb1 !== $numb2); # identical not equal
-// var_dump($numb1 > $numb2); # greater than
-// var_dump($numb1 < $numb2); # less than
-// var_dump($numb1 >= $numb2); # greater than or equal to
-// var_dump($numb1 <= $numb2); # less than or equal
+// Assignment operators
 
-// Logical Operators
-$username = "blawidris";
-$password = "_aYoola";
+// echo PHP_EOL . $x += $y .PHP_EOL; # addition
+// echo PHP_EOL . $x -= $y .PHP_EOL; # subtraction
+// echo PHP_EOL . $x /= $y .PHP_EOL; # division
+// echo PHP_EOL . $x *= $y .PHP_EOL; # multiplication
+// echo PHP_EOL . $x %= $y .PHP_EOL; # modulo (remainder)
+// echo PHP_EOL . $x **= $y .PHP_EOL; # exponential
 
-// var_dump(
-//     $username == "blawidris" && $password == "_aYoola"
-// ); # and you can use AND as well
+// String Operators
+// $greet = "Hello";
+// echo $greet . " World"; # concatenation
+// $greet .= " World";
+// echo $greet .PHP_EOL;
 
-// var_dump(
-//     $username == "blawidris" || $password == "_aYoola"
-// ); # you can use OR
+// Comparison
 
-// var_dump(
-//     !$username
-// ); # NOT
+$x = 10;
+$y = 2;
+
+// equal
+var_dump($x == 10); # not strict
+var_dump($x === '10'); # strict
+
+// not equal
+var_dump($y != '2'); # not strict
+var_dump($y !== '2'); # strict
+
+var_dump($x > $y); # greater than
+var_dump($x < $y); # less than
+var_dump($x >= $y); # greater than or equal to
+var_dump($x <= $y); # less than or equal to
+var_dump($x <=> 10);  # spaceship 0
+var_dump($x <=> 20);  # spaceship -1
+var_dump($x <=> $y);  # spaceship 1

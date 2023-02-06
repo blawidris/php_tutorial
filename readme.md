@@ -5,7 +5,7 @@
     - Understanding PHP and Why we use it []
     - Installation
     - Syntax
-    - Variable
+    - Constant
     - Variables
     - Data type
         - Integer
@@ -27,7 +27,6 @@
         - Switch
     
 - Chapter 2
-    - Array
     - Loops 
         - For loops
         - While
