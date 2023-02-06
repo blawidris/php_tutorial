@@ -94,13 +94,13 @@ In PHP, data types is categories into 3 which are;
 - Scalar types
   This type of variable can only store a single value such as integer, float, boolean and string
 
-***string*** is a series of character enclosed by single ('') or double ("") quote. 
+**_string_** is a sequence of character enclosed by single ('') or double ("") quote.
 
-***Integer*** is a whole number, either positive or negative, without a decimal point. Integers can be written in decimal (base 10), hexadecimal (base 16), or octal (base 8) form.
+**_Integer_** is a whole number, either positive or negative, without a decimal point. Integers can be written in decimal (base 10), hexadecimal (base 16), or octal (base 8) form.
 
-***Float*** is a number with a decimal point.
+**_Float_** is a number with a decimal point.
 
-***Boolean*** A boolean is a data type that can only have two values: true or false.
+**_Boolean_** A boolean is a data type that can only have two values: true or false.
 
 _e.g_
 
@@ -132,3 +132,55 @@ PHP consider the ffg as falsy:
 - When variable value = 0.0
 - When an array is empty
 - When value = null
+
+### Variable Interpolation
+
+Allow you to place variable inside the string. You can sometimes wrap the variable with curly braces.
+
+_e.g_
+
+```
+  $firstName = "Sodiq";
+
+  // without curly braces
+  $fullName = "Ade $firstName";
+
+  // with curly braces
+  echo "My name is {$fullName}" . PHP_EOL;
+
+```
+
+### Heredoc and NowDoc
+
+These are ways to handle long and multiline string that may contain complex expression or can contain single and double quote without the need to escape them.
+
+** Difference between heredoc and nowdoc
+- Heredoc treat strings as if it was enclose with double i.e can have variables between heredoc while nowdoc treat strings as if it was enclose with single quote i.e cannot have variable between
+
+- Nowdoc’s syntax is similar to the heredoc’s syntax except that the identifier which follows the <<< operator needs to be enclosed in single quotes.
+
+*e.g*
+
+```
+
+// Heredoc
+
+<?php
+
+$he = 'Bob';
+$she = 'Alice';
+
+$text = <<<TEXT
+$he said "PHP is awesome".
+"Of course" $she agreed."
+TEXT;
+
+echo $text;
+
+// Nowdoc
+$str = <<<'IDENTIFIER'
+place a string here
+it can span multiple lines
+and include single quote ' and double quotes "
+IDENTIFIER;
+```
