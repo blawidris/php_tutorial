@@ -4,8 +4,15 @@
 - Chapter One
     - Understanding PHP and Why we use it []
     - Installation
+    - Syntax
+    - Variable
     - Variables
     - Data type
+        - Integer
+        - Float
+        - String
+        - Null
+        - Array
     - Output & construct
     - Type casting
     - Operators 

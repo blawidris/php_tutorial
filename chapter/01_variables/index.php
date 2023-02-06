@@ -1,4 +1,5 @@
 <?php
+use function mysql_xdevapi\expression;
 
 # ============== Constant, Variables & Data Type ============== #
 
@@ -27,10 +28,10 @@ A constant is a name that holds a simple value that cannot be changed during the
 // echo STATUS_PAID . PHP_EOL;
 
 // Create Prefix with define function
-define("OPTION", "OPTION");
+// define("OPTION", "OPTION");
 
-define(OPTION . '_1', 'paid');
-echo OPTION_1. PHP_EOL;
+// define(OPTION . '_1', 'paid');
+// echo OPTION_1. PHP_EOL;
 
 
 /*
@@ -49,7 +50,6 @@ List of Data Type
 /* 
 ============ 
 String: is a sequence of characters surrounded by single quotes or double quotes
-
 * String Literal
 - single quote('') 
 - double quote ("")
@@ -121,7 +121,6 @@ Integer: are numbers without decimal points
 /* 
 ============ 
 Float: are numbers with decimal points also known as floating-point
-
 - PHP supports the floating-point numbers in scientific notation e.g 0.125E1 // 0.125 * 10^1 or 1.25
 ============ 
 */
@@ -152,13 +151,13 @@ Null:
 ============ 
 */
 
-$x = null;
+// $x = null;
 
-var_dump($x);
+// var_dump($x);
 
 // check null Variable
-var_dump(is_null($x)); 
-var_dump($x ===  null); 
+// var_dump(is_null($x)); 
+// var_dump($x ===  null); 
 
 // Another way 
 // $y = 123;
@@ -169,8 +168,114 @@ var_dump($x ===  null);
 // var_dump($y);
 
 # Type casting
-var_dump(intval($x)) . PHP_EOL;
-var_dump((string) $x);
-var_dump((bool) $x);
-var_dump((float) $x);
-var_dump((array) $x);
+// var_dump(intval($x)) . PHP_EOL;
+// var_dump((string) $x);
+// var_dump((bool) $x);
+// var_dump((float) $x);
+// var_dump((array) $x);
+
+/* 
+============ 
+Arrays: is a container that stores list of value of different data types which can be declared using [] or array() function
+============ 
+*/
+
+// creating array
+$programmingLanguages = ["PHP", "Java", "Ruby"];
+$primaryColors = array("Red", "Blue", "Green");
+
+// access array using index
+// echo $programmingLanguages[0] . PHP_EOL;
+// var_dump(isset($programmingLanguages[2]));
+
+// change array value using index
+// $programmingLanguages['2'] = "JavaScript";
+
+// add value to an array
+// $programmingLanguages[] = "C++"; # add value to the end
+
+// array function
+// var_dump(count($programmingLanguages));
+// array_push($programmingLanguages, "C#"); # add value from behind
+// array_unshift($programmingLanguages, 'python'); # add to beginning
+
+# remove value from behind
+// unset($programmingLanguages[4]); 
+// array_pop($programmingLanguages);
+
+# remove from beginning
+// array_shift($programmingLanguages);
+
+// var_dump(array_key_exists(0, $programmingLanguages));
+var_dump($programmingLanguages);
+
+
+
+// Associative array allow you to keep track of elements by names rather than by numbers.
+
+# Create an Associative array
+
+// $programmingLanguagesVersion = [
+//     "PHP" => 8.0,
+//     "Python" => 3.9
+// ];
+
+// // access value by key
+// var_dump($programmingLanguagesVersion['PHP']);
+
+// // Add new key  
+// $programmingLanguagesVersion['go'] = '1.9';
+
+// $newLang = "Rail";
+// $programmingLanguagesVersion[$newLang] = '1.9';
+
+// var_dump($programmingLanguagesVersion);
+
+
+// Multi-dimensional Array
+
+// $programmingLangs = [
+//     "PHP" => [
+//         "creator" => 'Rasmus Lerdorf',
+//         'extension' => '.php',
+//         'website' => 'www.php.net',
+//         'isOpenSource' => true,
+//         'versions' => [
+//             ['version' => 8, 'releaseDate' => 'Nov 26, 2020'],
+//             ['version' => 7.4, 'releaseDate' => 'Nov 28, 2019']
+//         ]
+//     ],
+//     "Python" => [
+//         "creator" => 'Guido Van Rossum',
+//         'extension' => '.py',
+//         'website' => 'www.python.org',
+//         'isOpenSource' => true,
+//         'versions' => [
+//             ['version' => 3.9, 'releaseDate' => 'Oct 5, 2020'],
+//             ['version' => 3.8, 'releaseDate' => 'Oct 14, 2019']
+//         ]
+//     ],
+// ];
+
+// access value
+// var_dump($programmingLangs['PHP']);
+// var_dump($programmingLangs['PHP']['website']);
+// var_dump($programmingLangs['PHP']['versions'][0]);
+
+
+// $arr = [true => 1, 1 => 2, '1' => 3, null => 4];
+// var_dump($arr);
+// var_dump($arr['']);
+
+// $array = ['a', 'b', 'c', 5 => 'd', 'e', 'f'];
+// var_dump($array);
+
+# Expressions is anything that has a value or evaluate to a value
+$x = 5; # expression 
+$y = $x; # expression
+
+$z = sum($x + $y); # expression
+
+if($x < 5 /* expression */){
+    // statement
+}
