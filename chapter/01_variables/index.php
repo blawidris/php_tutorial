@@ -207,7 +207,7 @@ $primaryColors = array("Red", "Blue", "Green");
 // array_shift($programmingLanguages);
 
 // var_dump(array_key_exists(0, $programmingLanguages));
-var_dump($programmingLanguages);
+// var_dump($programmingLanguages);
 
 
 
@@ -271,11 +271,11 @@ var_dump($programmingLanguages);
 // var_dump($array);
 
 # Expressions is anything that has a value or evaluate to a value
-$x = 5; # expression 
-$y = $x; # expression
+// $x = 5; # expression 
+// $y = $x; # expression
 
-$z = sum($x + $y); # expression
+// $z = sum($x + $y); # expression
 
-if($x < 5 /* expression */){
-    // statement
-}
+// if($x < 5 /* expression */){
+//     #statement
+// }
