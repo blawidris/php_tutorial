@@ -25,7 +25,7 @@ Function
 
 # unpack (...)
 
-// function sum(...$numbs): int
+// function sum(...$numbs): int|float
 // {
 //     return array_sum($numbs);
 // }
@@ -33,17 +33,52 @@ Function
 // echo sum(1, 2, 4) . PHP_EOL;
 
 # name arguement
-function sumEven(int $x, int $y)
-{
-    if ($x % 2 == 0) {
-        return $x += 1;
-    }else{
-        return $x + $y;
-    }
-}
+// function sumEven(int $x, int $y)
+// {
+//     if ($x % 2 == 0) {
+//         return $x += 1;
+//     }else{
+//         return $x + $y;
+//     }
+// }
 
-echo sumEven(y: 5, x: 3) . PHP_EOL;
-// return, declare & goto
+// echo sumEven(y: 5, x: 3) . PHP_EOL;
+
+
+/*
+===========
+Variable function
+===========
+- It is used to implement callbacks, function tables, etc
+- It won't work with language construct such echo, print, unset, isset, empty, include, require, etc
+*/
+
+// $x = 'sum';
+
+// if(is_callable($x)){
+//     echo sum(1, 2, 4) . PHP_EOL;
+// }else{
+//     'Not callable';
+// }
+
+/*
+===========
+Anonymous function
+===========
+- Also known as lamda function or closure
+- Can be used as values of Variable
+- Can intherit variable from a parent scope using use Keyword
+*/
+
+$val = 10;
+
+$sum = function (int|float ...$numbs) use ($val): int|float
+{
+    array_push($numbs, $val);
+    return array_sum($numbs);
+};
+
+echo $sum(1, 2, 3, 4) . PHP_EOL;
 /*
 ===========
 Keyword return

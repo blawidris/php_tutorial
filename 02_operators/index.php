@@ -3,15 +3,17 @@
 /*
 ======================
 OPERATORS
+======================
 ** Types **
 - Unary Operators: requires 1 value e.g !
 - Binary Operators: requires 2 value (most common in php)
 - Arithmetic operators
+- increment & decrement
 - Assignment operators
 - Comparison operators
-- Logical operators:
-- String operators
-- Array operators
+- Logical operator
+- String operator
+- Array operator
 - Error control operators
 - 
 - Ternary Operators: requires 3 value
@@ -33,7 +35,22 @@ OPERATORS
 // var_dump(fdiv(10.4, 2.5)); # float division
 // var_dump(fmod(10.4, 2.5)); # float modulo
 
+$x = 10;
+
+// Increment
+// echo $x++ . PHP_EOL; # prefix
+// echo $x . PHP_EOL; # prefix
+// echo ++$x . PHP_EOL; # postfix
+
+// Decrement
+// echo --$x . PHP_EOL; # postfix
+// $x-- . PHP_EOL; # prefix
+// echo $x . PHP_EOL; # prefix
+
 // Assignment operators
+
+$x = 10;
+$y = 2;
 
 // echo PHP_EOL . $x += $y .PHP_EOL; # addition
 // echo PHP_EOL . $x -= $y .PHP_EOL; # subtraction
@@ -44,30 +61,32 @@ OPERATORS
 
 // String Operators
 // $greet = "Hello";
-// echo $greet . " World"; # concatenation
+// $time = 10;
+// # concatenation
+// echo $greet . " World"; 
 // $greet .= " World";
 // echo $greet .PHP_EOL;
+// echo "the time is $time:00pm";
 
 // Comparison
-
-// $x = 10;
-// $y = 2;
+$x = 10;
+$y = 2;
 
 // equal
-// var_dump($x == 10); # not strict
-// var_dump($x === '10'); # strict
+// var_dump($x == '10'); # not strict
+// var_dump($x === "10"); # strict
 
 // not equal
-// var_dump($y != '2'); # not strict
-// var_dump($y !== '2'); # strict
+var_dump($y != '2'); # not strict
+var_dump($y !== '2'); # strict
 
 // var_dump($x > $y); # greater than
 // var_dump($x < $y); # less than
 // var_dump($x >= $y); # greater than or equal to
 // var_dump($x <= $y); # less than or equal to
-// var_dump($x <=> 10);  # spaceship 0
-// var_dump($x <=> 20);  # spaceship -1
-// var_dump($x <=> $y);  # spaceship 1
+// var_dump($x <=> 10);  # spaceship return 0 if values are equal
+// var_dump($x <=> 20);  # spaceship return -1 if value on right side greater than left
+// var_dump($x <=> $y);  # spaceship return 1 if the value on the left is greater
 
 // Ternary Operators
 // $x = "Hello World";
@@ -198,13 +217,13 @@ OPERATORS
 // var_dump($x >> $y); # return 0
 
 // Array Operators (+, ==, ===, !==, <>, !=)
-$a = [1, 2, 3];
-$b = [4, 5, 6, 7, 8];
-$d = ["a" => 1, 'b' => 2, 'c' => 3];
-$e = ["a" => 1, 'b' => 2, 'c' => 3];
+// $a = [1, 2, 3];
+// $b = [4, 5, 6, 7, 8];
+// $d = ["a" => 1, 'b' => 2, 'c' => 3];
+// $e = ["a" => 1, 'b' => 2, 'c' => 3];
 
 # Union operators (+)
-$z = $a + $b; # check index/key exists then merge if doesn't
+// $z = $a + $b; # check index/key exists then merge if doesn't
 // var_dump($z);
 // var_dump($a == $b); # return true if key-value pair match
 // var_dump($d === $e); # return true if key-value pair match and are in same order
