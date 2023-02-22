@@ -77,16 +77,23 @@ $y = 2;
 // var_dump($x === "10"); # strict
 
 // not equal
-var_dump($y != '2'); # not strict
-var_dump($y !== '2'); # strict
+// var_dump($y != '2'); # not strict
+// var_dump($y !== '2'); # strict
 
 // var_dump($x > $y); # greater than
 // var_dump($x < $y); # less than
 // var_dump($x >= $y); # greater than or equal to
 // var_dump($x <= $y); # less than or equal to
-// var_dump($x <=> 10);  # spaceship return 0 if values are equal
 // var_dump($x <=> 20);  # spaceship return -1 if value on right side greater than left
+// var_dump($x <=> 10);  # spaceship return 0 if values are equal
 // var_dump($x <=> $y);  # spaceship return 1 if the value on the left is greater
+
+// Coalescing Operators
+// $x = null;
+
+// $y = $x ?? "Item is empty";
+
+// print_r($y . PHP_EOL);
 
 // Ternary Operators
 // $x = "Hello World";
@@ -96,48 +103,42 @@ var_dump($y !== '2'); # strict
 // echo $result . PHP_EOL;
 
 
-// Coalescing Operators
-// $x = null;
-
-// $y = $x ?? "Hello";
-
-// print_r($y . PHP_EOL);
 
 // @ - Error Operators
-// $x = @file('foo.txt');
+// $x = @file(__DIR__.'/foo.txt');
+// echo "Found" . PHP_EOL;
 
-// increment operators
+// Logical Operators e.g And (&&), OR (||), Not (!), XOR (^)
 
-// $x = 5;
+$x = true;
+$y = false;
+$z = true;
+$q = false;
 
-// echo ++$x . PHP_EOL; # prefix increment/decrement returns value of a variable after it has been incremented;
-
-// echo $x++ . PHP_EOL; # postfix increment/decrement returns value of a variable before it has been incremented;
-// echo $x . PHP_EOL;
-
-// echo --$x . PHP_EOL;
-// echo $x-- . PHP_EOL;
-// echo $x . PHP_EOL;
-
-// Logical Operators
-
-// $x = true;
-// $y = false;
-// $z = true;
-// $q = false;
+$username = "blaw";
+$password = '123';
 
 # AND or && returns true if all variables are true or false
-// var_dump($x && $y);  # false
-// var_dump($x && $z);  # true
-// var_dump($y AND $q); # false
+//if($username == 'blaw' && $password == '123'){
+//     print("Username Confirm") . PHP_EOL;
+// }else{
+//     print("Username invalid") . PHP_EOL;   
+// }
+
 
 # OR or || returns true if any of the variable is true or false
-// var_dump($x || $y); # true
-// var_dump($x || $z); # true 
-// var_dump($q OR $y); # false
+// if($username == 'blaw' || $password == '12'){
+//     print("Username Confirm") . PHP_EOL;
+// }else{
+//     print("Username invalid") . PHP_EOL;   
+// }
 
 # XOR return true if any value true and false is all value is true
-// var_dump($x xor $y);
+//if($username == 'blaw' XOR  $password == '12'){
+//     print("Username Confirm") . PHP_EOL;
+// }else{
+//     print("Username invalid") . PHP_EOL;   
+// }
 
 
 // Bitwise Operators (&, |, ^, ~, >>, <<)
@@ -223,7 +224,8 @@ var_dump($y !== '2'); # strict
 // $e = ["a" => 1, 'b' => 2, 'c' => 3];
 
 # Union operators (+)
-// $z = $a + $b; # check index/key exists then merge if doesn't
+// $z = $b + $a; # check index/key exists then merge if doesn't
+
 // var_dump($z);
 // var_dump($a == $b); # return true if key-value pair match
 // var_dump($d === $e); # return true if key-value pair match and are in same order

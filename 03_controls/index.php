@@ -1,18 +1,21 @@
 <?php
 
 // Control Structure
-$score = 97;
+$score = 50;
 
 # if else elseif
 
 // if ($score >= 80) {
 //     echo "A" . PHP_EOL;
-// } elseif ($score >= 70) {
+// } 
+// elseif ($score >= 70) {
 //     echo "B" . PHP_EOL;
 // } elseif ($score >= 60) {
 //     echo "C" . PHP_EOL;
-// } else {
+// } elseif($score >= 50) {
 //     echo "D" . PHP_EOL;
+// }else{
+//     echo "E" . PHP_EOL;
 // }
 
 # Switch
@@ -53,7 +56,7 @@ $score = 97;
 - can be assign to variable
 - 
 */
-$paymentStatus = 1;
+// $paymentStatus = 1;
 
 // echo match ($paymentStatus) {
 //     1 => 'Paid',
@@ -64,11 +67,11 @@ $paymentStatus = 1;
 
 # assign match() to variable
 
-$paymentStatusDisplay = match ($paymentStatus) {
-    1 => 'Paid',
-    2, 3 => 'Decline',
-    0 => 'Pending',
-    default => 'Unknown status'
-} . PHP_EOL;
+// $paymentStatusDisplay = match ($paymentStatus) {
+//     1 => 'Paid',
+//     2, 3 => 'Decline',
+//     0 => 'Pending',
+//     default => 'Unknown status'
+// } . PHP_EOL;
 
-echo $paymentStatusDisplay;
+// echo $paymentStatusDisplay;

@@ -1,27 +1,27 @@
 <?php
 
-declare(strict_types=1);
+// declare(strict_types=1);
+
 /*
-===========
+======================
 Function
-===========
+======================
 */
 
 # create function
-
-// function name()
+// function greetMe()
 // {
-//     echo "Idris";
+//     print("Welcome");
 // }
 
-// name();
+// greetMe();
 
 # add parameters
-// function greet(string $name){
+// function greet(int $name){
 //     return "Welcome $name" . PHP_EOL;
 // }
 
-// echo greet('Idris');
+// echo greet(6);
 
 # unpack (...)
 
@@ -30,19 +30,15 @@ Function
 //     return array_sum($numbs);
 // }
 
-// echo sum(1, 2, 4) . PHP_EOL;
+// echo sum(1.0, 2.4, 4.2) . PHP_EOL;
 
-# name arguement
-// function sumEven(int $x, int $y)
+# named argument
+// function register(string $username, string $password, string $email)
 // {
-//     if ($x % 2 == 0) {
-//         return $x += 1;
-//     }else{
-//         return $x + $y;
-//     }
+//     echo "$username, $email, $password";
 // }
 
-// echo sumEven(y: 5, x: 3) . PHP_EOL;
+// echo register(email: "bla@hotmail.com", password: '123', username: "blaw") . PHP_EOL;
 
 
 /*
@@ -53,13 +49,15 @@ Variable function
 - It won't work with language construct such echo, print, unset, isset, empty, include, require, etc
 */
 
-// $x = 'sum';
+// $x = sum(1, 2, 4);
 
 // if(is_callable($x)){
 //     echo sum(1, 2, 4) . PHP_EOL;
 // }else{
 //     'Not callable';
 // }
+
+// echo $x;
 
 /*
 ===========
@@ -70,15 +68,17 @@ Anonymous function
 - Can intherit variable from a parent scope using use Keyword
 */
 
-$val = 10;
+// $val = 10;
 
-$sum = function (int|float ...$numbs) use ($val): int|float
-{
-    array_push($numbs, $val);
-    return array_sum($numbs);
-};
+// $sum = function (int|float ...$numbs) use ($val): int|float
+// {
+//     array_push($numbs, $val);
+//     return array_sum($numbs);
+// };
 
-echo $sum(1, 2, 3, 4) . PHP_EOL;
+
+// echo $sum(1, 2, 3, 4) . PHP_EOL;
+
 /*
 ===========
 Keyword return
