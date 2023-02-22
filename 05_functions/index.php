@@ -1,5 +1,6 @@
 <?php
 
+# declare
 // declare(strict_types=1);
 
 /*
@@ -117,7 +118,3 @@ Keyword return
 
 //     echo $i++ . PHP_EOL;
 // }
-
-# declare
-
-// declare(strict_types=1);
