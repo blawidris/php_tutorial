@@ -72,27 +72,17 @@ Additionally, you can use a package manager like apt-get or yum to install PHP o
 - Then click the Next button to start installation.
 
 
-## PHP Syntax
+### PHP Syntax
 
-- Php file file extension ends with **.php**
+- Php file extension ends with **.php**
 
 - Php line of code start with **<?php** and ends with **?>**
 
-- Any statement that comes inside 2 will be executed as PHP and must be close with semi-colon (;)
+- Any statement that comes inside *item 2* will be executed as PHP and must be close with semi-colon (;)
 
-    - statement is a code that does something
+### Terminology used
 
-- PHP variable start with dollar ($) sign _e.g: $name = "Idris"_
-
-- PHP is case-sensitive with the following:
-
-- variable name
-- class name
-
-While it is not with;
-
-- User-defined function
-- PHP constructs such as if, if-else, if-elseif, switch, while, do-while, etc.
-- PHP keywords such as true or false
-
-Whitespace and line-breaks doesn't matter but do make use of it when formatting your code
+**Statement** is a code that does something
+**Expression** is value itself or anything the return value
+**Identifier** is a name given to a memory location to store value
+**Keywords** are in build syntax/word used that can only use within the code 

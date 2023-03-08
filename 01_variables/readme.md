@@ -101,13 +101,15 @@ In PHP, data types is categories into 3 which are;
 **_Float_** is a number with a decimal point.
 
 **_Boolean_** A boolean is a data type that can only have two values: true or false.
+**Array** is a container that stores variable of same data type
 
 _e.g_
 
 ```
   $myName = "Idris Lawal"; // string
   $myAge = 24; // integer (int: decimal)
-  $isEmployed = false; # boolean (bool)
+  $isEmployed = true; # boolean (bool)
+  $isMarried= false;
   $myCurrentBalance = 200.44; # float
 
   # integer
@@ -118,7 +120,8 @@ _e.g_
   $product_quantity = 1_000;
   $product_price = 12_000.00;
 
-  //
+  // Array
+  
 
 ```
 

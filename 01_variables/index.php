@@ -1,10 +1,5 @@
 <?php
 
-// expression is a value e.g 1,"Hello world"
-// statement
-// identifier 
-// keyword e.g if, define()
-
 // comment
 // single 
 # single 
