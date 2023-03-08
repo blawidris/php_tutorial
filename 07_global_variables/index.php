@@ -26,7 +26,7 @@
 
 // echo "<pre>";
 // var_dump($_COOKIE['myName']);
-// echo "</pre>";\
+// echo "</pre>";
 
 // session_start();
 
@@ -45,8 +45,8 @@
 
 ?>
 
-<form action="" method="post">
+<!-- <form action="" method="post">
 
 <input type="text" name="username">
 <button>Submit</button>
-</form>
+</form> -->
