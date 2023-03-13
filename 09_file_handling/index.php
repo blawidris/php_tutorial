@@ -58,8 +58,13 @@ $filename = 'file.txt';
 //     }
 // }
 
+// copy file
+copy('file.txt', 'bar.txt');
+
+// renaming file
+rename('file.txt', 'old_file.txt');
+
 
 
 ?>
 
-<form action="" method="post"></form>

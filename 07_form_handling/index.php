@@ -38,10 +38,7 @@
 
 // session_unset();
 
-// $_SERVER
-// $_REQUEST
-// $_COOKIE
-// $_SESSION
+// exercise: User registration & Add Form Validation
 
 ?>
 
